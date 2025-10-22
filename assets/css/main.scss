@@ -10,16 +10,15 @@ html, body { font-family: "Fira Code", ui-monospace, Menlo, Consolas, "Liberatio
 h1, h2, .site-title { letter-spacing:.2px; font-weight:600; }
 code, pre { font-family: "Fira Code", monospace; }
 
-/* keep pixel art crisp */
+/* crisp pixels */
 .page__hero--overlay,
 img[src*="punk-fran"] { image-rendering: pixelated; image-rendering: crisp-edges; }
 
-/* accent color = neon green */
+/* accent = neon green */
 :root { --accent:#00ff88; }
 a { color: var(--accent); }
 a:hover, a:focus { color: var(--accent) !important; opacity:.9; }
-.masthead a.site-title span { display:none; }
-.masthead .site-logo { margin-right: 0; }
+.masthead .site-title { display:none !important; }           /* hide text next to logo */
 .masthead .site-title a,
 .masthead .greedy-nav a,
 .masthead .search__toggle { color: var(--accent) !important; }
@@ -29,60 +28,34 @@ a:hover, a:focus { color: var(--accent) !important; opacity:.9; }
 .btn--primary { background: transparent; color:#fff; }
 .btn:hover, .btn:focus { color: var(--accent) !important; border-color: var(--accent); background: transparent; }
 .archive a, .page__content a { color: var(--accent); }
-.masthead .site-title { display: none !important; }
 
-
-/* typing cursor (hero JS adds .typing-cursor) */
+/* typing cursor for hero title (used by typing.js) */
 .typing-cursor{ display:inline-block; width:.6ch; color:var(--accent); animation:blink 1s steps(1) infinite; }
 @keyframes blink { 50% { opacity:0; } }
 
-/* HERO AVATAR */
-/* desktop baseline */
-.page__hero--overlay .wrapper { position: relative; }
-.page__hero--overlay .wrapper::after{
+/* remove hero avatar (previous overlay) */
+.page__hero--overlay .wrapper::after { display:none !important; }
+
+/* avatar next to logo in masthead */
+.masthead .site-logo { position: relative; margin-right: 3.2rem; }
+.masthead .site-logo::after{
   content:"";
   position:absolute;
-  right: 9rem;          /* move left/right */
-  top: -2.5rem;         /* negative = higher */
-  width: 280px !important;
-  height: 280px !important;
-  border-radius:50%;
-  background:url("/assets/images/punk-fran.png") center/cover no-repeat;
-  border:3px solid rgba(255,255,255,.15);
-  box-shadow:0 0 0 3px rgba(0,0,0,.35) inset;
-  z-index:2; pointer-events:none;
+  left: calc(100% + .6rem);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: url("/assets/images/punk-fran.png") center/cover no-repeat;
+  image-rendering: pixelated; image-rendering: crisp-edges;
+  border: 2px solid rgba(255,255,255,.18);
+  box-shadow: 0 0 0 2px rgba(0,0,0,.35) inset;
+  pointer-events: none; z-index: 2;
 }
 
-/* tablets */
-@media (max-width: 820px){
-  .page__hero--overlay { padding-right: 9rem; }
-  .page__hero--overlay .wrapper::after{
-    right: 1rem;        /* nearer right edge */
-    top: 0.4rem;        /* move down a bit */
-    width: 150px !important;
-    height: 150px !important;
-  }
-}
-
-/* phones: push avatar further RIGHT and down */
+/* mobile sizing */
 @media (max-width: 560px){
-  .page__hero--overlay { padding-right: 9rem; }
-  .page__hero--overlay .wrapper::after{
-    right: -3.0rem;   /* was .2rem */
-    top: 3.6rem;
-    width: 120px !important;
-    height: 120px !important;
-  }
-}
-
-/* very small phones */
-@media (max-width: 380px){
-  .page__hero--overlay { padding-right: 8rem; }
-  .page__hero--overlay .wrapper::after{
-    right: -1.2rem;   /* was .2rem */
-    top: 4.6rem;
-    width: 100px !important;
-    height: 100px !important;
-  }
+  .masthead .site-logo { margin-right: 2.6rem; }
+  .masthead .site-logo::after{ width: 28px; height: 28px; }
 }
 
