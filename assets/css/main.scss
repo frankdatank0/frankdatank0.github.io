@@ -60,9 +60,23 @@ a:hover, a:focus { color: var(--accent) !important; opacity:.9; }
   .masthead .site-logo::after{ width: 36px; height: 36px; }
 }
 
-/* mobile: hide visible nav links, use hamburger only */
+/* mobile: keep icons on the right */
 @media (max-width: 820px){
-  .masthead .greedy-nav .visible-links { display: none !important; }
-  .masthead .greedy-nav .greedy-nav__toggle { display: inline-flex !important; }
+  .masthead .greedy-nav{
+    display:flex; align-items:center; flex-wrap:nowrap;
+  }
+  .masthead .greedy-nav .visible-links{ display:none !important; }
+  .masthead .greedy-nav .greedy-nav__toggle{ 
+    display:inline-flex !important; 
+    margin-left:auto;               /* push to right */
+    order:2;
+  }
+  .masthead .greedy-nav .search__toggle{
+    display:inline-flex !important;
+    margin-left:.6rem;              /* to the right of hamburger */
+    order:3;
+  }
+  .masthead .site-logo{ margin-right:.8rem; }         /* tighter so no wrap */
+  .masthead .site-logo::after{ left:calc(100% + .3rem); width:28px; height:28px; }
 }
 
