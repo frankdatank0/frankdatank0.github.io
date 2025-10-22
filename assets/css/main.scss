@@ -10,6 +10,13 @@ html, body { font-family: "Fira Code", ui-monospace, Menlo, Consolas, "Liberatio
 h1, h2, .site-title { letter-spacing:.2px; font-weight:600; }
 code, pre { font-family: "Fira Code", monospace; }
 
+/* hero title in terminal monospace */
+.page__hero--overlay .page__title{
+  font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
 /* crisp pixels */
 .page__hero--overlay,
 img[src*="punk-fran"] { image-rendering: pixelated; image-rendering: crisp-edges; }
