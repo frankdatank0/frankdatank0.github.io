@@ -29,6 +29,8 @@ a:hover, a:focus { color: var(--accent) !important; opacity:.9; }
 .btn--primary { background: transparent; color:#fff; }
 .btn:hover, .btn:focus { color: var(--accent) !important; border-color: var(--accent); background: transparent; }
 .archive a, .page__content a { color: var(--accent); }
+.masthead .site-title { display: none !important; }
+
 
 /* typing cursor (hero JS adds .typing-cursor) */
 .typing-cursor{ display:inline-block; width:.6ch; color:var(--accent); animation:blink 1s steps(1) infinite; }
@@ -66,7 +68,7 @@ a:hover, a:focus { color: var(--accent) !important; opacity:.9; }
 @media (max-width: 560px){
   .page__hero--overlay { padding-right: 9rem; }
   .page__hero--overlay .wrapper::after{
-    right: -2.0rem;   /* was .2rem */
+    right: -3.0rem;   /* was .2rem */
     top: 3.6rem;
     width: 120px !important;
     height: 120px !important;
