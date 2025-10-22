@@ -3,8 +3,8 @@ layout: splash
 title: "Welcome to Fran's Page"
 header:
   overlay_color: "#000"
-  overlay_filter: "0.25"
-  overlay_image: /assets/images/punk-fran.png
+  overlay_filter: "0.15"
+  overlay_image: /assets/images/punk-banner.png
   actions:
     - label: "Checkout Blogs"
       url: /blog/
