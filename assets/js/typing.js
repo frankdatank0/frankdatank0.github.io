@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
   cursor.textContent = '█';
 
   const span = document.createElement('span');
-  h1.textContent = '';           // clear original
+  h1.textContent = '';
   h1.appendChild(span);
   h1.appendChild(cursor);
 
   let i = 0;
-  const speed = 55;              // ms per char
-  const typer = setInterval(() => {
+  const speed = 55;
+  const timer = setInterval(() => {
     span.textContent = text.slice(0, ++i);
-    if (i >= text.length) clearInterval(typer); // leave blinking cursor
+    if (i >= text.length) clearInterval(timer);
   }, speed);
 });
 
