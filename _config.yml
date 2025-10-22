@@ -1,38 +1,33 @@
 title: "frankdatank0"
-masthead_title: ""           # hide text in header; use logo only
+masthead_title: ""
 description: "Offensive security research, writeups, and tooling"
 url: "https://frankdatank0.github.io"
-# Theme via remote_theme (works on GitHub Pages)
-plugins: [jekyll-remote-theme, jekyll-sitemap, jekyll-seo-tag, jekyll-archives]  # removed jekyll-feed
 
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+plugins:
+  - jekyll-include-cache
+  - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-archives
 
-# Site-wide
-logo: /assets/images/avatar.png
+logo: /assets/images/frankdatank0-logo.svg
 search: true
-lunr:
-  search_within_pages: true
-minimal_mistakes_skin: "dark"   # try "air", "neon", etc.
+lunr: { search_within_pages: true }
+minimal_mistakes_skin: "dark"
 
-# Collections
 collections:
-  projects:
-    output: true
-    permalink: /projects/:name/
-  writeups:
-    output: true
-    permalink: /writeups/:name/
+  projects: { output: true, permalink: /projects/:name/ }
+  writeups: { output: true, permalink: /writeups/:name/ }
 
-# Navigation
 defaults:
-  - scope: {path: "", type: posts}
-    values: {layout: single, author_profile: true, read_time: true, comments: false}
-  - scope: {path: "", type: projects}
-    values: {layout: single, author_profile: true}
-  - scope: {path: "", type: writeups}
-    values: {layout: single, author_profile: true}
+  - scope: { path: "", type: posts }
+    values: { layout: single, author_profile: true, read_time: true, comments: false }
+  - scope: { path: "", type: projects }
+    values: { layout: single, author_profile: true }
+  - scope: { path: "", type: writeups }
+    values: { layout: single, author_profile: true }
 
-# Footer links
 author:
   name: "Francis Kim"
   avatar: "/assets/images/avatar.png"
@@ -40,20 +35,13 @@ author:
   links:
     - { label: "GitHub", icon: "fab fa-github", url: "https://github.com/frankdatank0" }
     - { label: "Twitter/X", icon: "fab fa-x-twitter", url: "https://x.com/___" }
-    - { label: "RSS", icon: "fas fa-rss", url: "/feed.xml" }
 
-# Archives pages
 jekyll-archives:
   enabled: [categories, tags]
-  layouts:
-    category: archive-taxonomy
-    tag: archive-taxonomy
-  permalinks:
-    category: /category/:name/
-    tag: /tag/:name/
+  layouts: { category: archive-taxonomy, tag: archive-taxonomy }
+  permalinks: { category: /category/:name/, tag: /tag/:name/ }
 
-# Build
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
-sass:
-  style: compressed
+sass: { style: compressed }
+
