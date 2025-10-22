@@ -15,35 +15,27 @@ code, pre { font-family: "Fira Code", monospace; }
 img[src*="punk-fran"] { image-rendering: pixelated; image-rendering: crisp-edges; }
 
 /* circle avatar inside hero next to title */
-/* hero avatar: bigger + more left */
+/* hero avatar: larger + left */
 .page__hero--overlay .wrapper { position: relative; }
 .page__hero--overlay .wrapper::after{
   content:"";
   position:absolute;
-  right: 16rem;   /* smaller value = further left; adjust 12–20rem */
-  top: 0.6rem;    /* nudges vertically */
-  width: 190px;   /* size */
-  height: 190px;
+  right: 12rem;        /* smaller => more left */
+  top: .2rem;
+  width: 320px !important;
+  height: 320px !important;
   border-radius:50%;
   background:url("/assets/images/punk-fran.png") center/cover no-repeat;
   image-rendering:pixelated; image-rendering:crisp-edges;
   border:3px solid rgba(255,255,255,.15);
   box-shadow:0 0 0 3px rgba(0,0,0,.35) inset;
+  z-index: 2;          /* sit above hero */
+  pointer-events: none;
 }
 
 @media (max-width: 680px){
   .page__hero--overlay .wrapper::after{
-    right: 1rem; top: 1rem; width: 96px; height: 96px;
-  }
-}
-
-/* mobile tweaks */
-@media (max-width: 680px){
-  .page__hero--overlay .wrapper::after{
-    right: 1rem;
-    top: 1rem;
-    width: 84px;
-    height: 84px;
+    right: 1rem; top: 1rem; width: 110px !important; height: 110px !important;
   }
 }
 
