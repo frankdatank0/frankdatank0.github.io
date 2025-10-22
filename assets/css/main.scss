@@ -16,18 +16,21 @@ img[src*="punk-fran"] { image-rendering: pixelated; image-rendering: crisp-edges
 
 /* circle avatar inside hero next to title */
 .page__hero--overlay .wrapper { position: relative; }
-.page__hero--overlay .wrapper::after {
-  content: "";
-  position: absolute;
-  right: 2rem;
-  top: 1.6rem;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background: url("/assets/images/punk-fran.png") center/cover no-repeat;
-  image-rendering: pixelated; image-rendering: crisp-edges;
-  border: 3px solid rgba(255,255,255,.15);
-  box-shadow: 0 0 0 3px rgba(0,0,0,.35) inset;
+.page__hero--overlay .wrapper::after{
+  content:"";
+  position:absolute;
+  right: 12rem;      /* smaller = more left; try 10–14rem */
+  top: 1.2rem;
+  width: 140px;
+  height: 140px;
+  border-radius:50%;
+  background:url("/assets/images/punk-fran.png") center/cover no-repeat;
+  image-rendering:pixelated; image-rendering:crisp-edges;
+  border:3px solid rgba(255,255,255,.15);
+  box-shadow:0 0 0 3px rgba(0,0,0,.35) inset;
+}
+@media (max-width:680px){
+  .page__hero--overlay .wrapper::after{ right:1rem; top:1rem; width:96px; height:96px; }
 }
 
 /* mobile tweaks */
