@@ -17,17 +17,15 @@ code, pre { font-family: "Fira Code", monospace; }
   letter-spacing: 0.5px;
 }
 
-.hero-social{ margin-top:.6rem; display:flex; gap:.5rem; }
-.hero-social .btn--icon{
-  padding:.35rem .6rem; font-size:.9rem; line-height:1;
-  display:inline-flex; align-items:center; gap:.4rem;
-  color:var(--accent); border-color:var(--accent); background:transparent;
+/* inline social icon buttons next to hero CTAs */
+.page__hero--overlay .page__actions{ display:flex; align-items:center; gap:.75rem; flex-wrap:wrap; }
+.btn--square{
+  width:40px; height:40px; padding:0;
+  display:inline-flex; align-items:center; justify-content:center;
+  border:1.5px solid var(--accent); background:transparent; color:var(--accent);
 }
-.hero-social .btn--icon img{
-  width:16px; height:16px; display:inline-block; filter: none;
-}
-.hero-social .btn--icon:hover{ opacity:.9; }
-
+.btn--square img, .btn--square svg{ width:20px; height:20px; display:block; }
+@media (max-width:560px){ .btn--square{ width:36px; height:36px; } }
 
 /* crisp pixels */
 .page__hero--overlay,

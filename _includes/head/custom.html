@@ -4,3 +4,23 @@
 </style>
 <script defer src="/assets/js/typing.js"></script>
 
+// Add GitHub + LinkedIn square buttons inline with hero actions
+(function addSocialButtons(){
+  const actions = document.querySelector('.page__hero--overlay .page__actions');
+  if(!actions) return;
+
+  const mk = (href, svgPath) => {
+    const a = document.createElement('a');
+    a.className = 'btn btn--square';
+    a.href = href; a.target = '_blank'; a.rel = 'noopener';
+    a.innerHTML = svgPath; // inline SVG keeps color via currentColor
+    return a;
+  };
+
+  const ghSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>`;
+  const liSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM7 10H3.98V22H7V10Zm4 0H8.99V22H12v-6.5c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 2 2.1 3.5V22h3v-7.3c0-3.6-.8-6.2-5-6.2-2 0-3.3 1.1-3.7 1.9V10Z"/></svg>`;
+
+  actions.appendChild(mk('https://github.com/frankdatank0', ghSVG));
+  actions.appendChild(mk('https://www.linkedin.com/in/franciskim-cybersecurity/', liSVG));
+})();
+
