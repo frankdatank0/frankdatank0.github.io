@@ -5,7 +5,7 @@
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
 
-/* terminal typography */
+/* typography */
 html, body { font-family: "Fira Code", ui-monospace, Menlo, Consolas, "Liberation Mono", monospace; }
 h1, h2, .site-title { letter-spacing:.2px; font-weight:600; }
 code, pre { font-family: "Fira Code", monospace; }
@@ -14,7 +14,26 @@ code, pre { font-family: "Fira Code", monospace; }
 .page__hero--overlay,
 img[src*="punk-fran"] { image-rendering: pixelated; image-rendering: crisp-edges; }
 
-/* hero avatar (desktop baseline) */
+/* accent color = neon green */
+:root { --accent:#00ff88; }
+a { color: var(--accent); }
+a:hover, a:focus { color: var(--accent) !important; opacity:.9; }
+.masthead .site-title a,
+.masthead .greedy-nav a,
+.masthead .search__toggle { color: var(--accent) !important; }
+.masthead .greedy-nav a:hover,
+.masthead .search__toggle:hover { color: var(--accent) !important; opacity:.9; }
+.btn, .btn--primary { border-color: var(--accent); }
+.btn--primary { background: transparent; color:#fff; }
+.btn:hover, .btn:focus { color: var(--accent) !important; border-color: var(--accent); background: transparent; }
+.archive a, .page__content a { color: var(--accent); }
+
+/* typing cursor (hero JS adds .typing-cursor) */
+.typing-cursor{ display:inline-block; width:.6ch; color:var(--accent); animation:blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity:0; } }
+
+/* HERO AVATAR */
+/* desktop baseline */
 .page__hero--overlay .wrapper { position: relative; }
 .page__hero--overlay .wrapper::after{
   content:"";
@@ -32,29 +51,31 @@ img[src*="punk-fran"] { image-rendering: pixelated; image-rendering: crisp-edges
 
 /* tablets */
 @media (max-width: 820px){
-  .page__hero--overlay { padding-right: 9rem; } /* give text room */
+  .page__hero--overlay { padding-right: 9rem; }
   .page__hero--overlay .wrapper::after{
-    right: 1rem;
-    top: -0.5rem;
-    width: 140px !important;
-    height: 140px !important;
+    right: 1rem;        /* nearer right edge */
+    top: 0.4rem;        /* move down a bit */
+    width: 150px !important;
+    height: 150px !important;
   }
 }
 
-/* phones */
+/* phones: move DOWN and RIGHT, shrink a bit more */
 @media (max-width: 560px){
   .page__hero--overlay { padding-right: 7rem; }
   .page__hero--overlay .wrapper::after{
-    right: .5rem;
-    top: 0rem;
-    width: 110px !important;
-    height: 110px !important;
+    right: .6rem;       /* push to the right */
+    top: 1.2rem;        /* push down so it doesn't overlap title/buttons */
+    width: 120px !important;
+    height: 120px !important;
   }
 }
 
-/* very small phones: hide if cramped */
+/* very small phones: smallest or hide if needed */
 @media (max-width: 380px){
   .page__hero--overlay { padding-right: 0; }
-  .page__hero--overlay .wrapper::after{ display:none; }
+  .page__hero--overlay .wrapper::after{
+    right: .5rem; top: 1.2rem; width: 96px !important; height: 96px !important;
+  }
 }
 
