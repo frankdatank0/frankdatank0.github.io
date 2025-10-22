@@ -1,0 +1,5 @@
+title: "Francis Kim"
+description: "Projects and research"
+url: "https://frankdatank0.github.io"
+theme: minima
+permalink: /blog/:year/:month/:day/:title/
