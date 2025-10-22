@@ -6,33 +6,37 @@
 @import "minimal-mistakes";
 
 /* terminal typography */
-html, body {
-  font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-}
-h1, h2, .site-title { letter-spacing: .2px; font-weight: 600; }
+html, body { font-family: "Fira Code", ui-monospace, Menlo, Consolas, "Liberation Mono", monospace; }
+h1, h2, .site-title { letter-spacing:.2px; font-weight:600; }
 code, pre { font-family: "Fira Code", monospace; }
 
-/* keep pixel art sharp */
-img[src*="punk-fran"],
-.page__hero--overlay {
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
+/* keep pixel art crisp */
+.page__hero--overlay,
+img[src*="punk-fran"] { image-rendering: pixelated; image-rendering: crisp-edges; }
+
+/* circle avatar inside hero next to title */
+.page__hero--overlay .wrapper { position: relative; }
+.page__hero--overlay .wrapper::after {
+  content: "";
+  position: absolute;
+  right: 2rem;
+  top: 1.6rem;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: url("/assets/images/punk-fran.png") center/cover no-repeat;
+  image-rendering: pixelated; image-rendering: crisp-edges;
+  border: 3px solid rgba(255,255,255,.15);
+  box-shadow: 0 0 0 3px rgba(0,0,0,.35) inset;
 }
 
-/* avatar + text row under hero */
-.intro-hero {
-  display: flex; align-items: center; gap: 20px;
-  margin: 1.5rem 0 2rem;
-}
-.avatar-circle {
-  width: 112px; height: 112px; border-radius: 50%;
-  border: 3px solid rgba(255,255,255,.12);
-}
-.intro-text { margin: 0 0 .7rem 0; }
-.hero-actions .btn { margin-right: .5rem; }
-
-@media (max-width: 640px) {
-  .intro-hero { flex-direction: column; align-items: flex-start; }
-  .avatar-circle { width: 92px; height: 92px; }
+/* mobile tweaks */
+@media (max-width: 680px){
+  .page__hero--overlay .wrapper::after{
+    right: 1rem;
+    top: 1rem;
+    width: 84px;
+    height: 84px;
+  }
 }
 
