@@ -1,12 +1,38 @@
 ---
+# SCSS front matter to trigger Jekyll
 ---
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
 
-/* terminal vibe */
-html, body { font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
-h1, h2, .site-title { letter-spacing:.2px; font-weight:600; }
+/* terminal typography */
+html, body {
+  font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+h1, h2, .site-title { letter-spacing: .2px; font-weight: 600; }
 code, pre { font-family: "Fira Code", monospace; }
-.page__hero--overlay { image-rendering: pixelated; image-rendering: crisp-edges; }
+
+/* keep pixel art sharp */
+img[src*="punk-fran"],
+.page__hero--overlay {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* avatar + text row under hero */
+.intro-hero {
+  display: flex; align-items: center; gap: 20px;
+  margin: 1.5rem 0 2rem;
+}
+.avatar-circle {
+  width: 112px; height: 112px; border-radius: 50%;
+  border: 3px solid rgba(255,255,255,.12);
+}
+.intro-text { margin: 0 0 .7rem 0; }
+.hero-actions .btn { margin-right: .5rem; }
+
+@media (max-width: 640px) {
+  .intro-hero { flex-direction: column; align-items: flex-start; }
+  .avatar-circle { width: 92px; height: 92px; }
+}
 
