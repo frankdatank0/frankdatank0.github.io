@@ -60,22 +60,25 @@ a:hover, a:focus { color: var(--accent) !important; opacity:.9; }
   }
 }
 
-/* phones: move DOWN and RIGHT, shrink a bit more */
+/* phones: move WAY down and right */
 @media (max-width: 560px){
-  .page__hero--overlay { padding-right: 7rem; }
+  .page__hero--overlay { padding-right: 9rem; }
   .page__hero--overlay .wrapper::after{
-    right: .6rem;       /* push to the right */
-    top: 1.2rem;        /* push down so it doesn't overlap title/buttons */
+    right: .2rem;      /* hug right edge */
+    top: 3.6rem;       /* much lower */
     width: 120px !important;
     height: 120px !important;
   }
 }
 
-/* very small phones: smallest or hide if needed */
+/* very small phones */
 @media (max-width: 380px){
-  .page__hero--overlay { padding-right: 0; }
+  .page__hero--overlay { padding-right: 8rem; }
   .page__hero--overlay .wrapper::after{
-    right: .5rem; top: 1.2rem; width: 96px !important; height: 96px !important;
+    right: .2rem;
+    top: 4.6rem;       /* even lower */
+    width: 100px !important;
+    height: 100px !important;
   }
 }
 
