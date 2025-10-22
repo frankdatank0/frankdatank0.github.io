@@ -60,3 +60,9 @@ a:hover, a:focus { color: var(--accent) !important; opacity:.9; }
   .masthead .site-logo::after{ width: 36px; height: 36px; }
 }
 
+/* mobile: hide visible nav links, use hamburger only */
+@media (max-width: 820px){
+  .masthead .greedy-nav .visible-links { display: none !important; }
+  .masthead .greedy-nav .greedy-nav__toggle { display: inline-flex !important; }
+}
+
