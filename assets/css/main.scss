@@ -8,4 +8,5 @@
 html, body { font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
 h1, h2, .site-title { letter-spacing:.2px; font-weight:600; }
 code, pre { font-family: "Fira Code", monospace; }
+img[src*="punk-fran"] { image-rendering: pixelated; image-rendering: crisp-edges; }
 

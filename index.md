@@ -3,13 +3,14 @@ layout: splash
 title: "Welcome to Fran's Page"
 header:
   overlay_color: "#000"
-  overlay_filter: "0.35"
-  overlay_image: /assets/images/mesh.jpg
+  overlay_filter: "0.25"
+  overlay_image: /assets/images/punk-fran.png
   actions:
     - label: "Checkout Blogs"
       url: /blog/
     - label: "More About Me"
       url: /about/
+
 intro:
   - excerpt: >
       Notes and tooling from real red team work. Web vulns, silly misconfigs, recon, weird services.
