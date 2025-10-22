@@ -1,0 +1,9 @@
+---
+# Only front matter to trigger Jekyll SASS
+---
+@import "minimal-mistakes/skins/dark"; // dark skin
+@import "minimal-mistakes";            // theme core
+// extras
+code, pre { font-family: Menlo, Monaco, Consolas, monospace; }
+.site-title { letter-spacing: .5px; }
+.page__content blockquote { border-left: 3px solid #3fe4; }
