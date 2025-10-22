@@ -14,27 +14,47 @@ code, pre { font-family: "Fira Code", monospace; }
 .page__hero--overlay,
 img[src*="punk-fran"] { image-rendering: pixelated; image-rendering: crisp-edges; }
 
-/* circle avatar inside hero next to title */
-/* hero avatar: slightly smaller, up + right */
+/* hero avatar (desktop baseline) */
 .page__hero--overlay .wrapper { position: relative; }
 .page__hero--overlay .wrapper::after{
   content:"";
   position:absolute;
-  right: 9rem;        /* ↓ value = move right (was 12rem) */
-  top: -2.5rem;       /* ↓ value = move up (was 0.2rem) */
-  width: 280px !important;   /* was 320px */
+  right: 9rem;          /* move left/right */
+  top: -2.5rem;         /* negative = higher */
+  width: 280px !important;
   height: 280px !important;
   border-radius:50%;
   background:url("/assets/images/punk-fran.png") center/cover no-repeat;
-  image-rendering:pixelated; image-rendering:crisp-edges;
   border:3px solid rgba(255,255,255,.15);
   box-shadow:0 0 0 3px rgba(0,0,0,.35) inset;
   z-index:2; pointer-events:none;
 }
 
-@media (max-width:680px){
+/* tablets */
+@media (max-width: 820px){
+  .page__hero--overlay { padding-right: 9rem; } /* give text room */
   .page__hero--overlay .wrapper::after{
-    right:1rem; top:1rem; width:110px !important; height:110px !important;
+    right: 1rem;
+    top: -0.5rem;
+    width: 140px !important;
+    height: 140px !important;
   }
+}
+
+/* phones */
+@media (max-width: 560px){
+  .page__hero--overlay { padding-right: 7rem; }
+  .page__hero--overlay .wrapper::after{
+    right: .5rem;
+    top: 0rem;
+    width: 110px !important;
+    height: 110px !important;
+  }
+}
+
+/* very small phones: hide if cramped */
+@media (max-width: 380px){
+  .page__hero--overlay { padding-right: 0; }
+  .page__hero--overlay .wrapper::after{ display:none; }
 }
 
