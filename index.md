@@ -34,15 +34,6 @@ feature_row:
     btn_label: See tools
 ---
 
-<div class="hero-social">
-  <a class="btn btn--icon" href="https://github.com/frankdatank0" target="_blank" rel="noopener">
-    <img src="/assets/images/icons/github.svg" alt="GitHub"><span>GitHub</span>
-  </a>
-  <a class="btn btn--icon" href="https://www.linkedin.com/in/franciskim-cybersecurity/" target="_blank" rel="noopener">
-    <img src="/assets/images/icons/linkedin.svg" alt="LinkedIn"><span>LinkedIn</span>
-  </a>
-</div>
-
 {% include feature_row id="intro" type="center" %}
 {% include feature_row %}
 
