@@ -18,6 +18,8 @@ img[src*="punk-fran"] { image-rendering: pixelated; image-rendering: crisp-edges
 :root { --accent:#00ff88; }
 a { color: var(--accent); }
 a:hover, a:focus { color: var(--accent) !important; opacity:.9; }
+.masthead a.site-title span { display:none; }
+.masthead .site-logo { margin-right: 0; }
 .masthead .site-title a,
 .masthead .greedy-nav a,
 .masthead .search__toggle { color: var(--accent) !important; }
@@ -64,7 +66,7 @@ a:hover, a:focus { color: var(--accent) !important; opacity:.9; }
 @media (max-width: 560px){
   .page__hero--overlay { padding-right: 9rem; }
   .page__hero--overlay .wrapper::after{
-    right: -0.8rem;   /* was .2rem */
+    right: -2.0rem;   /* was .2rem */
     top: 3.6rem;
     width: 120px !important;
     height: 120px !important;
