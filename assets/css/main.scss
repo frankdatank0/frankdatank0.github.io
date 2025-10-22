@@ -1,9 +1,11 @@
 ---
-# Only front matter to trigger Jekyll SASS
 ---
-@import "minimal-mistakes/skins/dark"; // dark skin
-@import "minimal-mistakes";            // theme core
-// extras
-code, pre { font-family: Menlo, Monaco, Consolas, monospace; }
-.site-title { letter-spacing: .5px; }
-.page__content blockquote { border-left: 3px solid #3fe4; }
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+@import "minimal-mistakes/skins/dark";
+@import "minimal-mistakes";
+
+/* terminal vibe */
+html, body { font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+h1, h2, .site-title { letter-spacing:.2px; font-weight:600; }
+code, pre { font-family: "Fira Code", monospace; }
+

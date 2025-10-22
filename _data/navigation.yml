@@ -1,11 +1,8 @@
 main:
   - title: "Home"
     url: /
-  - title: "Writeups"
-    url: /writeups/
-  - title: "Blog"
+  - title: "Posts"
     url: /blog/
   - title: "Projects"
     url: /projects/
-  - title: "Tags"
-    url: /tag/
+

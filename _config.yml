@@ -1,8 +1,10 @@
-title: "Francis Kim"
+title: "frankdatank0"
+masthead_title: ""           # hide text in header; use logo only
 description: "Offensive security research, writeups, and tooling"
 url: "https://frankdatank0.github.io"
 # Theme via remote_theme (works on GitHub Pages)
-plugins: [jekyll-remote-theme, jekyll-sitemap, jekyll-seo-tag, jekyll-feed, jekyll-archives]
+plugins: [jekyll-remote-theme, jekyll-sitemap, jekyll-seo-tag, jekyll-archives]  # removed jekyll-feed
+
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 
 # Site-wide
