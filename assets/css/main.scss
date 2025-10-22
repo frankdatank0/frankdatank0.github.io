@@ -17,6 +17,18 @@ code, pre { font-family: "Fira Code", monospace; }
   letter-spacing: 0.5px;
 }
 
+.hero-social{ margin-top:.6rem; display:flex; gap:.5rem; }
+.hero-social .btn--icon{
+  padding:.35rem .6rem; font-size:.9rem; line-height:1;
+  display:inline-flex; align-items:center; gap:.4rem;
+  color:var(--accent); border-color:var(--accent); background:transparent;
+}
+.hero-social .btn--icon img{
+  width:16px; height:16px; display:inline-block; filter: none;
+}
+.hero-social .btn--icon:hover{ opacity:.9; }
+
+
 /* crisp pixels */
 .page__hero--overlay,
 img[src*="punk-fran"] { image-rendering: pixelated; image-rendering: crisp-edges; }
