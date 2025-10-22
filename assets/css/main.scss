@@ -37,25 +37,19 @@ a:hover, a:focus { color: var(--accent) !important; opacity:.9; }
 .page__hero--overlay .wrapper::after { display:none !important; }
 
 /* avatar next to logo in masthead */
-.masthead .site-logo { position: relative; margin-right: 3.2rem; }
+/* desktop size */
 .masthead .site-logo::after{
-  content:"";
-  position:absolute;
-  left: calc(100% + .6rem);
-  top: 50%;
-  transform: translateY(-50%);
-  width: 34px; height: 34px;
-  border-radius: 50%;
-  background: url("/assets/images/punk-fran.png") center/cover no-repeat;
-  image-rendering: pixelated; image-rendering: crisp-edges;
-  border: 2px solid rgba(255,255,255,.18);
-  box-shadow: 0 0 0 2px rgba(0,0,0,.35) inset;
-  pointer-events: none; z-index: 2;
+  width: 44px;   /* was 34px */
+  height: 44px;
+  left: calc(100% + .2rem); /* your current offset */
+  border-width: 2px;        /* bump to 3px if you want */
 }
 
-/* mobile sizing */
+/* phones */
 @media (max-width: 560px){
-  .masthead .site-logo { margin-right: 2.6rem; }
-  .masthead .site-logo::after{ width: 28px; height: 28px; }
+  .masthead .site-logo::after{
+    width: 36px;   /* was 28px */
+    height: 36px;
+  }
 }
 
