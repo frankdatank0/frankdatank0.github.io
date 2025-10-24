@@ -15,7 +15,8 @@
       <pre class="screen" aria-live="polite"></pre>
       <div class="prompt">
         <span class="ps1">$</span>
-        <input id="intro-cmd" type="text" autofocus spellcheck="false" autocomplete="off" placeholder="type ./run">
+        // replace the input element line with this:
+        <input id="intro-cmd" type="text" autofocus spellcheck="false" autocomplete="off">
       </div>
       <div class="hint" id="intro-hint"></div>
     </div>`;
