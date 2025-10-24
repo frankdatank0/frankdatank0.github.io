@@ -19,7 +19,7 @@
     </div>`;
   document.addEventListener("DOMContentLoaded", () => document.body.appendChild(overlay));
 
-  const message = 'hey thanks for stopping by! type "./run" to get started\n';
+  const message = 'thanks for stopping by! get started with "./run"\n';
   function type(el, text, i = 0, speed = 22, cb) {
     if (i >= text.length) return cb && cb();
     el.textContent += text[i];
