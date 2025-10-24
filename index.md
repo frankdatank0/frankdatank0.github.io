@@ -19,11 +19,6 @@ feature_row:
     excerpt: Take a look at some of my blogs 
     url: /blog/
     btn_label: checkout posts
-  - image_path: /assets/images/tools1.png
-    alt: Tools
-    excerpt: Sharp utilities for operators
-    url: /projects/
-    btn_label: see toolbox
 ---
 
 {% include feature_row id="intro" type="center" %}
