@@ -172,3 +172,14 @@ html.intro-active body > *:not(#intro-terminal){
   #intro-terminal .hint{ padding: 0 16px 14px; }
 }
 
+/* smaller feature_row images on home */
+.mini-cards .archive__item-teaser { padding: 0; background: transparent; }
+.mini-cards .archive__item-teaser img{
+  display:block; margin:0 auto;
+  max-width: 160px; width: 160px; height:auto;
+  image-rendering: pixelated; /* keep the 8-bit look */
+}
+@media (min-width: 1024px){
+  .mini-cards .archive__item-teaser img{ max-width: 180px; width:180px; }
+}
+
