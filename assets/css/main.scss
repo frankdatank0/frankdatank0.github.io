@@ -104,3 +104,42 @@ a:hover, a:focus { color: var(--accent) !important; opacity:.9; }
   }
 }
 
+/* one-time terminal overlay */
+#intro-terminal{
+  position:fixed; inset:0; z-index:9999;
+  background:#0b0f12e6; backdrop-filter:saturate(140%) blur(2px);
+  display:flex; align-items:center; justify-content:center;
+  animation:fadeIn .25s ease-out;
+}
+#intro-terminal.closing{ animation:fadeOut .35s ease-in forwards; }
+@keyframes fadeIn{ from{opacity:0} to{opacity:1} }
+@keyframes fadeOut{ to{opacity:0; visibility:hidden} }
+
+#intro-terminal .term{
+  width:min(680px, 92vw); border:1px solid #1f2a33; border-radius:12px;
+  box-shadow:0 20px 60px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.03);
+  background:#0d1418;
+  font-family:"Fira Code", ui-monospace, Menlo, Consolas, "Liberation Mono", monospace;
+}
+#intro-terminal .bar{
+  height:28px; border-bottom:1px solid #1f2a33; display:flex; align-items:center; gap:6px; padding:0 10px;
+}
+#intro-terminal .dot{ width:10px; height:10px; border-radius:50%; background:#2a3c47; }
+#intro-terminal .screen{
+  margin:0; padding:20px; min-height:120px; color:#cfe8dd; white-space:pre-wrap;
+}
+#intro-terminal .prompt{
+  display:flex; align-items:center; gap:10px; padding:0 20px 18px 20px;
+}
+#intro-terminal .ps1{ color:#00ff88; }
+#intro-terminal #intro-cmd{
+  flex:1; background:transparent; border:none; outline:none; color:#e8fff5;
+  font:inherit; padding:.2rem 0;
+}
+#intro-terminal #intro-cmd::placeholder{ color:#5a7a70; }
+#intro-terminal .hint{ padding:0 20px 16px 20px; color:#7bc9a8; font-size:.9rem; }
+#intro-terminal .hint.error{ color:#ff6b6b; }
+
+/* prevent background scroll while overlay is shown */
+html:has(#intro-terminal){ overflow:hidden; }
+
