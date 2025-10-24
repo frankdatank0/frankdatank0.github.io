@@ -9,19 +9,19 @@ intro:
   - excerpt: >
       Notes and tooling from real red team work. Web vulns, silly misconfigs, recon, weird services.
 feature_row:
-  - image_path: /assets/images/term1.png
+  - image_path: /assets/images/about1.png
     alt: About me
-    excerpt: Get to know me and what I like to do
+    excerpt: Get to know me
     url: /about/
     btn_label: frankdatank0
-  - image_path: /assets/images/web1.png
+  - image_path: /assets/images/write1.png
     alt: Writeups
-    excerpt: Take a look at some of my blogs I've written up
+    excerpt: Take a look at some of my blogs 
     url: /blog/
     btn_label: Open
   - image_path: /assets/images/tools1.png
     alt: Tools
-    excerpt: sharp utilities for operators.
+    excerpt: Sharp utilities for operators
     url: /projects/
     btn_label: See tools
 ---
