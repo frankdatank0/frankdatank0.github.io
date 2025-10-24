@@ -18,12 +18,12 @@ feature_row:
     alt: Writeups
     excerpt: Take a look at some of my blogs 
     url: /blog/
-    btn_label: Open
+    btn_label: posts
   - image_path: /assets/images/tools1.png
     alt: Tools
     excerpt: Sharp utilities for operators
     url: /projects/
-    btn_label: See tools
+    btn_label: toolbox
 ---
 
 {% include feature_row id="intro" type="center" %}
