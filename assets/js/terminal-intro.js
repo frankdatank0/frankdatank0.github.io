@@ -3,10 +3,8 @@
   const KEY = "introSeen_v1";
   if (localStorage.getItem(KEY)) return;
 
-  // lock background styling via CSS selector html.intro-active …
   document.documentElement.classList.add("intro-active");
 
-  // Build overlay
   const overlay = document.createElement("div");
   overlay.id = "intro-terminal";
   overlay.innerHTML = `
@@ -15,14 +13,12 @@
       <pre class="screen" aria-live="polite"></pre>
       <div class="prompt">
         <span class="ps1">$</span>
-        // replace the input element line with this:
         <input id="intro-cmd" type="text" autofocus spellcheck="false" autocomplete="off">
       </div>
       <div class="hint" id="intro-hint"></div>
     </div>`;
   document.addEventListener("DOMContentLoaded", () => document.body.appendChild(overlay));
 
-  // Typewriter
   const message = 'hey thanks for stopping by! type "./run" to get started\n';
   function type(el, text, i = 0, speed = 22, cb) {
     if (i >= text.length) return cb && cb();
@@ -46,7 +42,7 @@
         overlay.classList.add("closing");
         setTimeout(() => {
           document.documentElement.classList.remove("intro-active");
-          window.location.href = "/"; // change to "/blog/" if you want
+          window.location.href = "/";
         }, 350);
       } else {
         hint.textContent = `command not found: ${val}`;
