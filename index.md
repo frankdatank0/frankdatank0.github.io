@@ -5,27 +5,22 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.12"
   overlay_image: /assets/images/punk-banner-blue.png
-  actions:
-    - label: "Checkout Blogs"
-      url: /blog/
-    - label: "More About Me"
-      url: /about/
 intro:
   - excerpt: >
       Notes and tooling from real red team work. Web vulns, silly misconfigs, recon, weird services.
 feature_row:
   - image_path: /assets/images/term1.png
-    alt: Recon
-    title: Recon at scale
-    excerpt: Masscan/Nmap pipelines, IPv6 heuristics, banner fuzzing.
-    url: /writeups/
-    btn_label: Read
+    alt: About
+    title: About me
+    excerpt: Get to know me.
+    url: /about/
+    btn_label: Open
   - image_path: /assets/images/web1.png
-    alt: Web
-    title: Web exploitation
-    excerpt: Smuggling, desyncs, SSRF chains, auth bypass.
+    alt: Writeups
+    title: Checkout writeups
+    excerpt: Take a look at some of my blogs.
     url: /blog/
-    btn_label: Posts
+    btn_label: Open
   - image_path: /assets/images/tools1.png
     alt: Tools
     title: Tools
