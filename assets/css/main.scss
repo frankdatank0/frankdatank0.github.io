@@ -104,64 +104,71 @@ a:hover, a:focus { color: var(--accent) !important; opacity:.9; }
   }
 }
 
-/* one-time terminal overlay base */
-#intro-terminal{
-  position:fixed; inset:0; z-index:9999;
-  background:#000;                      /* fully opaque */
-  display:flex; align-items:center; justify-content:center;
-  animation:fadeIn .2s ease-out;
-}
-#intro-terminal.closing{ animation:fadeOut .35s ease-in forwards; }
-@keyframes fadeIn{ from{opacity:0} to{opacity:1} }
-@keyframes fadeOut{ to{opacity:0; visibility:hidden} }
+/* ===== Terminal intro overlay (append at end of main.scss) ===== */
 
-/* lock background while overlay shows */
+/* full-screen overlay */
+#intro-terminal{
+  position: fixed; inset: 0; z-index: 9999;
+  background: #000;                              /* hide page behind */
+  display: flex; align-items: center; justify-content: center;
+  animation: introFadeIn .2s ease-out;
+}
+#intro-terminal.closing { animation: introFadeOut .35s ease-in forwards; }
+@keyframes introFadeIn { from { opacity: 0 } to { opacity: 1 } }
+@keyframes introFadeOut { to { opacity: 0; visibility: hidden } }
+
+/* lock and dim background while active */
 html.intro-active body > *:not(#intro-terminal){
   filter: blur(10px) brightness(0.12);
-  pointer-events:none; user-select:none;
+  pointer-events: none; user-select: none;
 }
 
 /* terminal card */
 #intro-terminal .term{
-  width:min(680px, 92vw);
-  border:1px solid #1f2a33; border-radius:12px;
-  box-shadow:0 20px 60px rgba(0,0,0,.65), inset 0 0 0 1px rgba(255,255,255,.03);
-  background:#0d1418;
-  font-family:"Fira Code", ui-monospace, Menlo, Consolas, "Liberation Mono", monospace;
-}
-#intro-terminal .bar{ height:28px; border-bottom:1px solid #1f2a33; display:flex; gap:6px; padding:0 10px; align-items:center; }
-#intro-terminal .dot{ width:10px; height:10px; border-radius:50%; background:#2a3c47; }
-#intro-terminal .screen{ margin:0; padding:20px; min-height:120px; color:#9ff3cf; white-space:pre-wrap; }
-
-
-/* terminal intro tweaks */
-#intro-terminal .ps1{ color:#00ff88; }                /* $ prompt color */
-#intro-terminal #intro-cmd{
-  flex:1;
-  background:transparent;
-  border:none;
-  outline:none;
-  color:#00ff88;                                      /* input text green */
-  caret-color:#00ff88;                                /* caret green */
-  font:inherit;
-  padding:.2rem 0;
+  width: min(680px, 92vw);
+  background: #0d1418;
+  border: 1px solid #1f2a33; border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.65), inset 0 0 0 1px rgba(255,255,255,.03);
+  font-family: "Fira Code", ui-monospace, Menlo, Consolas, "Liberation Mono", monospace;
 }
 
-/* optional: thin underline for the input field */
+/* window bar + dots */
+#intro-terminal .bar{
+  height: 28px; border-bottom: 1px solid #1f2a33;
+  display: flex; align-items: center; gap: 6px; padding: 0 10px;
+}
+#intro-terminal .dot{ width: 10px; height: 10px; border-radius: 50%; background: #2a3c47; }
+
+/* typed message screen */
+#intro-terminal .screen{
+  margin: 0; padding: 20px; min-height: 120px;
+  color: #9ff3cf; white-space: pre-wrap;
+}
+
+/* prompt row: input inline with $ */
 #intro-terminal .prompt{
-  position:relative;
-  border:1px solid #12342a;
-  border-radius:6px;
-  padding:8px 12px;
-  background:#0b1612;
+  display: flex; align-items: center; gap: .5ch;
+  margin: 0 20px 16px; padding: 6px 10px;
+  background: #0b1612; border: 1px solid #12342a; border-radius: 6px;
 }
 #intro-terminal .prompt:focus-within{
-  border-color:#00ff88;
-  box-shadow:0 0 0 2px rgba(0,255,136,.08) inset;
+  border-color: #00ff88; box-shadow: 0 0 0 2px rgba(0,255,136,.08) inset;
+}
+#intro-terminal .ps1{ color: #00ff88; line-height: 1; }
+
+#intro-terminal #intro-cmd{
+  flex: 1; min-width: 0; margin: 0; padding: 0;
+  background: transparent; border: 0; outline: 0;
+  color: #00ff88; caret-color: #00ff88; font: inherit;
 }
 
-/* make the message text a bit greener too */
-#intro-terminal .screen{ color:#9ff3cf; }
-#intro-terminal .hint{ color:#7bc9a8; }
-#intro-terminal .hint.error{ color:#ff6b6b; }
+/* hint / errors */
+#intro-terminal .hint{ padding: 0 20px 16px; color: #7bc9a8; font-size: .95rem; }
+#intro-terminal .hint.error{ color: #ff6b6b; }
+
+@media (max-width: 480px){
+  #intro-terminal .screen{ padding: 16px; }
+  #intro-terminal .prompt{ margin: 0 16px 14px; }
+  #intro-terminal .hint{ padding: 0 16px 14px; }
+}
 
