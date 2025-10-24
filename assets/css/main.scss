@@ -177,23 +177,27 @@ html.intro-active body > *:not(#intro-terminal){
   padding: 0;
   background: transparent;
   text-align: center;
-  max-height: 140px;
+  max-height: 110px;             /* tighter than 140px */
 }
+
 .mini-cards .archive__item-teaser img{
-  width: 120px !important;
+  width: 96px !important;        /* base size (was 120px) */
   height: auto !important;
   max-width: none !important;
   image-rendering: pixelated;
   display: inline-block;
 }
 
-/* tighten horizontal padding a bit */
-.mini-cards .feature__item{ padding: 0 0.75rem; }
+/* tighten horizontal padding */
+.mini-cards .feature__item{ padding: 0 0.5rem; }  /* was 0.75rem */
 
+/* desktop upsize a bit */
 @media (min-width: 1024px){
-  .mini-cards .archive__item-teaser img{ width: 140px !important; }
+  .mini-cards .archive__item-teaser img{ width: 110px !important; } /* was 140px */
 }
+
+/* small phones */
 @media (max-width: 600px){
-  .mini-cards .archive__item-teaser img{ width: 96px !important; }
+  .mini-cards .archive__item-teaser img{ width: 80px !important; }  /* was 96px */
 }
 
