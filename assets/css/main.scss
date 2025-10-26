@@ -201,3 +201,20 @@ html.intro-active body > *:not(#intro-terminal){
   .mini-cards .archive__item-teaser img{ width: 80px !important; }  /* was 96px */
 }
 
+/* interactive feature cards */
+.mini-cards .archive__item{
+  transition: transform .18s ease, box-shadow .18s ease;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.mini-cards .archive__item:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,255,136,.12);
+}
+.mini-cards .archive__item-teaser img{
+  transition: transform .18s ease;
+}
+.mini-cards .archive__item:hover .archive__item-teaser img{
+  transform: scale(1.06);
+}
+
