@@ -38,7 +38,7 @@ author:
   bio: "Red teamer. Web, cloud, and weird networks."
   links:
     - { label: "GitHub", icon: "fab fa-github", url: "https://github.com/frankdatank0" }
-    - { label: "LinkedIn", icon: "fab fa-x-twitter", url: "https://www.linkedin.com/in/franciskim-cybersecurity/" }
+    - { label: "LinkedIn", icon: "fab fa-linkedin-in", url: "https://www.linkedin.com/in/franciskim-cybersecurity/" }
 
 jekyll-archives:
   enabled: [categories, tags]
