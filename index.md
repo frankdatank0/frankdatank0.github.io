@@ -22,5 +22,6 @@ feature_row:
     url: /projects/
     btn_label: see toolbox
 ---
+{% include feature_row %}
 
 
