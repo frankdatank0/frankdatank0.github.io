@@ -1,12 +1,10 @@
----
+---                         # must be the very first line
 layout: single
-title: "Kicking off: why this site exists"
-excerpt: "What I’ll publish here and how the site is put together."
-date: 2025-10-26
-categories: [writeups]
-tags: [certs]
+title: "Conquering the OSCP: my playbook"
+date: 2025-03-03
+excerpt: Notes, mindset, labs → exam
+tags: [oscp, study, labs]
 ---
-
 
 Conquering the OSCP: Self-Study Tips and Exam Tricks
 Education | Penetration Testing

@@ -10,6 +10,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-archives
+  - jekyll-paginate
+
+paginate: 10               # how many per page
+paginate_path: "/blog/page:num/"
 
 logo: /assets/images/frankdatank0-logo.svg
 search: true
@@ -30,11 +34,11 @@ defaults:
 
 author:
   name: "Francis Kim"
-  avatar: "/assets/images/avatar.png"
+  avatar: "/assets/images/punk-fran.png"
   bio: "Red teamer. Web, cloud, and weird networks."
   links:
     - { label: "GitHub", icon: "fab fa-github", url: "https://github.com/frankdatank0" }
-    - { label: "Twitter/X", icon: "fab fa-x-twitter", url: "https://x.com/___" }
+    - { label: "LinkedIn", icon: "fab fa-x-twitter", url: "https://www.linkedin.com/in/franciskim-cybersecurity/" }
 
 jekyll-archives:
   enabled: [categories, tags]
