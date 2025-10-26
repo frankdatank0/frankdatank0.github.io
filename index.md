@@ -5,9 +5,6 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.12"
   overlay_image: /assets/images/punk-banner-blue.png
-intro:
-  - excerpt: >
-      Notes and tooling from real red team work. Web vulns, silly misconfigs, recon, weird services.
 feature_row:
   - image_path: /assets/images/about1.png
     alt: About me
@@ -26,6 +23,4 @@ feature_row:
     btn_label: see toolbox
 ---
 
-{% include feature_row id="intro" type="center" %}
-{% include feature_row class="mini-cards" %}
 
