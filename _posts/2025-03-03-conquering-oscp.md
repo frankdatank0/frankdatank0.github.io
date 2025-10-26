@@ -43,29 +43,29 @@ The goal here is to build a foundation to reach proficiency in penetration testi
 
 Below is a list of the major topics within the OSCP, which you can use as a checklist while studying your foundation:  
 
-Enumeration and Information Gathering
-Port Scanning 
-Service Enumeration
-Locating Hidden Files/Directories
-Web Application Attacks
-Reconnaissance
-Exploit Research
-Injection Attacks
-Obtaining Shell Access 
-Network Service Attacks
-Exploit Research
-Obtaining Shell Access 
-Active Directory
-Authentication Attacks
-Lateral Movement
-Password Attacks and Hash Cracking
-File Transfer Techniques
-Lateral Movement
-Pivoting and Port redirection
-Privilege escalation techniques
-Windows
-Linux
-Note Taking 
+- Enumeration and Information Gathering
+- Port Scanning 
+- Service Enumeration
+- Locating Hidden Files/Directories
+- Web Application Attacks
+- Reconnaissance
+- Exploit Research
+- Injection Attacks
+- Obtaining Shell Access 
+- Network Service Attacks
+- Exploit Research
+- Obtaining Shell Access 
+- Active Directory
+- Authentication Attacks
+- Lateral Movement
+- Password Attacks and Hash Cracking
+- File Transfer Techniques
+- Lateral Movement
+- Pivoting and Port redirection
+- Privilege escalation techniques
+- Windows
+- Linux
+- Note Taking 
 
 **The Importance of Effective Notetaking**
 
