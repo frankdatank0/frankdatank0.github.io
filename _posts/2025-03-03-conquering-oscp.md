@@ -8,7 +8,10 @@ tags: [oscp, study, labs]
 
 # Conquering the OSCP: Self-Study Tips and Exam Tricks
 
-![Pivot note](/assets/images/posts/oscp/cert.png)
+{% include figure
+   image_path="/assets/images/posts/oscp/cert.png"
+   caption="https://credentials.offsec.com/827f00a4-5965-419c-8246-a04f65a2e3ee#acc.DkanlJXw"
+   class="align-center" %}
 
 **What is the Offensive Security Certified Professional (OSCP) Certification?**
 
