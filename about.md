@@ -17,10 +17,6 @@ I now focus on offensive security primarily conducting web application, external
 
 ---
 
-## Resume
-
-[Download PDF](/assets/Francis_Kim_Resume.pdf){: .btn .btn--primary }
-
 **Francis J. Kim**  
 [Fkim39@gmail.com](mailto:Fkim39@gmail.com) • (443) 980-0847 • [LinkedIn](https://www.linkedin.com/in/franciskim-cybersecurity)
 
@@ -46,7 +42,8 @@ I now focus on offensive security primarily conducting web application, external
 - Performed internal/assumed-breach, cloud (AWS/Azure/GCP), external network, mobile (iOS/Android), client-side, and web app tests; delivered FedRAMP/PCI assessments.  
 - Applied exploit dev, privesc, lateral movement, and evasion to simulate real attacks.  
 - Led threat modeling and attack surface analysis for FedRAMP readiness.  
-- Executed red team operations using SE, OSINT, and adversary emulation.  
+- Executed red team operations using SE, OSINT, and adversary emulation.
+- Led advanced social engineering campaigns creating custom phishlets/HTML with proxied landing pages utilizing evilginx to capture credentials (passwords, MFA, auth cookies) and sessions.
 - Reviewed source code (Python, Java, JavaScript, C#) for security flaws.  
 - Produced reports with remediation and risk ratings for technical and exec audiences.
 
