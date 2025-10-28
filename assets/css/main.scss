@@ -215,3 +215,17 @@ html.intro-active body > *:not(#intro-terminal){
   .feature__wrapper .archive__item-teaser img{ width: 80px !important; }
 }
 
+/* projects terminal */
+.proj-term{
+  max-width: 720px; margin: 4rem auto;
+  background:#0d1418; border:1px solid #1f2a33; border-radius:12px;
+  padding:18px 20px; color:#9ff3cf;
+  font-family:"Fira Code", ui-monospace, Menlo, Consolas, "Liberation Mono", monospace;
+  box-shadow:0 12px 40px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.03);
+}
+.proj-term .prompt{
+  margin-top:12px; padding:8px 10px; border-radius:6px;
+  background:#0b1612; border:1px solid #12342a; color:#00ff88;
+}
+.proj-term .ps1{ color:#00ff88; }
+
