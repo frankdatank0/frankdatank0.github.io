@@ -8,6 +8,8 @@ tags: [oscp, study, labs]
 
 # Conquering the OSCP: Self-Study Tips and Exam Tricks
 
+![Pivot note](/assets/images/posts/oscp/cert.png)
+
 **What is the Offensive Security Certified Professional (OSCP) Certification?**
 
 The Offensive Security Certified Professional certification, or OSCP, is an ethical hacking certification that demonstrates proficiency in penetration testing using Kali Linux tools. This test can be undeniably grueling if you are ill-prepared, with nearly 24 hours of hands-on keyboard hacking followed by another 24 hours of documentation/report writing.  
@@ -79,7 +81,7 @@ It’s important to research your options and choose what works best for you. Id
 
 Below is a snapshot into Obsidian, a helpful Markdown text editor: 
 
-
+![Pivot note](/assets/images/posts/oscp/obsidian.png)
 
 **Create Your Study Plan**  
 
