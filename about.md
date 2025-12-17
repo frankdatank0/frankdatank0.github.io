@@ -21,12 +21,12 @@ I now focus on offensive security primarily conducting web application, external
 [Fkim39@gmail.com](mailto:Fkim39@gmail.com) • (443) 980-0847 • [LinkedIn](https://www.linkedin.com/in/franciskim-cybersecurity)
 
 ### Key Skills
-- **Offensive Security Engineering:** adversary emulation, OPSEC, payload dev, C2 (Cobalt Strike)  
-- **Red Teaming:** Kerberoasting, AS-REP roast, constrained/resource-based delegation, AD CS abuse, DCSync, PtT/PtH, lateral movement  
+- **Offensive Security Engineering:** payload dev, malware dev, AV evasion 
+- **Red Teaming:**  adversary emulation, OPSEC, lateral movement, C2 (Cobalt Strike)
 - **Social Engineering:** Evilginx2, GuardPhish, GoPhish, MFA interception, phishlets, landing pages, SPF/DKIM/DMARC readiness  
-- **Web & API Security:** Burp Suite  
+- **Web & API Security:** Burp Suite, Postman  
 - **Cloud & Containers:** AWS, Azure, GCP, IAM privesc, metadata svc, role assumption, Docker, Kubernetes RBAC/workload abuse  
-- **Network & Mobile:** Wireshark, Responder, Impacket/CrackMapExec, NTLM relay, Frida  
+- **Network & Mobile:** Wireshark, Responder, Impacket/CrackMapExec, NTLM relay, Frida, Ghidra, IOS and Android apps (I have a jailbroken iPhone 10)  
 - **Programming & Scripting:** Python, PowerShell, Bash, SQL; automation for data reduction and report-ready outputs  
 - **Vuln Mgmt & SIEM:** Tenable Nessus, Qualys VMDR/PC, Splunk, CVSS, POA&M tracking
 
@@ -37,7 +37,7 @@ I now focus on offensive security primarily conducting web application, external
 
 ### Professional Experience
 
-**Schellman** — *Penetration Tester, Cybersecurity Consultant*  
+**Schellman** — *Senior Penetration Tester, Cybersecurity Consultant*  
 *11/2024 – Present*  
 - Performed internal/assumed-breach, cloud (AWS/Azure/GCP), external network, mobile (iOS/Android), client-side, and web app tests; delivered FedRAMP/PCI assessments.  
 - Applied exploit dev, privesc, lateral movement, and evasion to simulate real attacks.  
